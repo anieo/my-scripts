@@ -30,7 +30,7 @@ copy() {
 dest=$2
 # rm -r $dest
 mkdir -p $dest
-find $1 -follow -print0 |
+find "$1" -follow -print0 |
     while IFS= read -r -d '' i; do
         IFS="/"
         # parts=(${i//\// })
