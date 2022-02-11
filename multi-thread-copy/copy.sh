@@ -27,16 +27,16 @@ copy() {
     fi
 
 }
-dest=$2
+dest="$2"
 # rm -r $dest
-mkdir -p $dest
+mkdir -p "$dest"
 find "$1" -follow -print0 |
     while IFS= read -r -d '' i; do
         IFS="/"
         # parts=(${i//\// })
         read -ra parts <<< "$i"
         root="${parts[0]}"
-        source=$i
+        source="$i"
         if [ "$root" == "." ] || [ "$root" == "" ]; then
 
             source=("${i[@]:2}")
