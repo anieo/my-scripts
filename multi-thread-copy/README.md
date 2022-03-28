@@ -27,3 +27,5 @@ $ /path/to/script/./copy.sh ./source ./dest
 - [ ] `..` : handle in source and destnation
 - [ ] `..` : handle in source and destnation
 - [ ] absolute paths : handle in source and destnation
+- [ ] error handling for wrong input
+- [ ] Help message
